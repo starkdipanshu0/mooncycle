@@ -16,16 +16,17 @@ export const useWebPDecoder = (url: string) => {
         const loadWebP = async () => {
             try {
                 const response = await fetch(url);
-                if (!response.body) throw new Error("No body in response");
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error ${response.status}`);
+                }
+
+                const buffer = await response.arrayBuffer();
 
                 const imageDecoder = new ImageDecoder({
-                    data: response.body,
+                    data: buffer,
                     type: "image/webp",
                 });
-
-                const decodedFrames: ImageBitmap[] = [];
-                // Decode all frames
-                // We'll decode tracks.image.frameCount if accessible, or just loop
 
                 // Wait for metadata to get track info
                 await imageDecoder.tracks.ready;
@@ -35,6 +36,7 @@ export const useWebPDecoder = (url: string) => {
                     throw new Error("No video track found");
                 }
 
+                const decodedFrames: ImageBitmap[] = [];
                 const frameCount = track.frameCount;
 
                 for (let i = 0; i < frameCount; i++) {
