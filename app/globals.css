@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+html {
+  font-size: 16px;
+  /* Explicitly set base size */
+  -webkit-text-size-adjust: 100%;
+  /* Prevent font scaling in landscape on iOS */
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 :root {
   --background: #F5F2EB;
   --foreground: #12161F;
@@ -15,6 +24,10 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  /* Prevent horizontal scroll causing zoom issues */
 }
 
 .font-serif {
