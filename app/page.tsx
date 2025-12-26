@@ -1,17 +1,21 @@
-import { UnboxingSection } from "@/components/landing/UnboxingSection";
-import { PurchaseGateway } from "@/components/landing/PurchaseGateway";
+import { AboutSection } from "@/components/landing/AboutSection";
+import { IngredientsSection } from "@/components/landing/IngredientsSection";
+import { HeroSection } from "@/components/landing/HeroSection";
+import { ProductShowcase } from "@/components/landing/ProductShowcase";
+import { FAQSection } from "@/components/landing/FAQSection";
+import { ContactStrip } from "@/components/landing/ContactStrip";
+
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#F5F2EB]">
-      {/* 
-        UnboxingSection handles the first 4 "phases":
-        1. Arrival
-        2. Box Opening
-        3. Product Explanation
-        4. Clearing
-      */}
-      <UnboxingSection />
+
+      <HeroSection />
+      <ProductShowcase />
+      <IngredientsSection />
+      <AboutSection />
+      <ContactStrip />
+      <FAQSection />
     </main>
   );
 }

@@ -2,7 +2,14 @@
 
 :root {
   --background: #F5F2EB;
-  --foreground: #1c1917;
+  --foreground: #12161F;
+
+  /* MOONCYCLE PALETTE */
+  --moon-dark: #12161F;
+  --moon-gold: #D4AF37;
+  --moon-cream: #F5F2EB;
+  --moon-stone: #1c1917;
+  /* Neutral Text */
 }
 
 body {
@@ -16,4 +23,36 @@ body {
 
 .font-handwriting {
   font-family: var(--font-caveat), cursive;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
 }
