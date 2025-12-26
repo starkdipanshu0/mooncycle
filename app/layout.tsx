@@ -44,7 +44,7 @@ export default function RootLayout({
         className={`${inter.variable} ${playfair.variable} ${caveat.variable} antialiased font-sans bg-[#F5F2EB]`}
         suppressHydrationWarning
       >
-        <CustomCursor />
+        {/* <CustomCursor /> */}
         <Navbar />
         {children}
         <Footer />
