@@ -78,31 +78,31 @@ const IngredientsScroll = () => {
 
 const Card = ({ item, index }: { item: typeof ingredients[0], index: number }) => {
     return (
-        <div className="w-screen h-screen flex flex-col md:flex-row items-center justify-center p-6 md:p-20 shrink-0 relative bg-[#F5F2EB]">
+        <div className="w-screen h-screen flex flex-col md:flex-row items-center justify-center p-[5vw] md:p-[7vw] shrink-0 relative bg-[#F5F2EB]">
             {/* TEXT CONTENT */}
-            <div className="flex flex-col justify-center items-start w-full md:w-1/2 p-4 md:p-12 gap-8 z-10">
+            <div className="flex flex-col justify-center items-start w-full md:w-1/2 p-[2vw] md:p-[3vw] gap-[2vw] z-10">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ margin: "-200px" }} // Trigger animation slightly before center
                 >
-                    <span className="text-xs md:text-sm tracking-[0.3em] uppercase font-bold text-[#D4AF37] mb-2 block">
+                    <span className="text-[clamp(0.75rem,0.9vw,0.875rem)] tracking-[0.3em] uppercase font-bold text-[#D4AF37] mb-2 block">
                         Material 0{index + 1}
                     </span>
-                    <h3 className="text-5xl md:text-7xl font-serif leading-[0.9] text-[#12161F] mb-6">
+                    <h3 className="text-[clamp(3rem,5.5vw,4.5rem)] font-serif leading-[0.9] text-[#12161F] mb-6">
                         {item.title}
                     </h3>
-                    <p className="text-lg md:text-xl font-sans text-[#12161F]/70 leading-relaxed max-w-lg">
+                    <p className="text-[clamp(1rem,1.2vw,1.25rem)] font-sans text-[#12161F]/70 leading-relaxed max-w-lg">
                         {item.description}
                     </p>
                     {/* Decorative Line */}
-                    <div className="w-24 h-[1px] bg-[#12161F]/20 mt-8"></div>
+                    <div className="w-[6vw] h-[1px] bg-[#12161F]/20 mt-[3vh]"></div>
                 </motion.div>
             </div>
 
             {/* VISUAL / IMAGE CARD */}
-            <div className="w-full md:w-1/2 h-[45vh] md:h-[75%] flex items-center justify-center p-4 md:p-12">
+            <div className="w-full md:w-1/2 h-[45vh] md:h-[75%] flex items-center justify-center p-[2vw] md:p-[3vw]">
                 <motion.div
                     className={`relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl ${!item.image ? item.color : ''}`}
                     initial={{ scale: 0.9, rotate: 2 }}

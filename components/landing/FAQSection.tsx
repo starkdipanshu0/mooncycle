@@ -28,18 +28,18 @@ const faqs = [
 
 export const FAQSection = () => {
     return (
-        <section className="w-full bg-[#12161F] text-[#F5F2EB] py-24 md:py-32 px-6">
-            <div className="max-w-4xl mx-auto">
-                <div className="text-center mb-16 md:mb-24">
-                    <span className="text-[#D4AF37] text-xs md:text-sm tracking-[0.3em] uppercase font-bold block mb-4">
+        <section className="w-full bg-[#12161F] text-[#F5F2EB] py-[10vh] px-[5vw]">
+            <div className="max-w-[clamp(20rem,60vw,60rem)] mx-auto">
+                <div className="text-center mb-[8vh]">
+                    <span className="text-[#D4AF37] text-[clamp(0.75rem,0.9vw,0.875rem)] tracking-[0.3em] uppercase font-bold block mb-4">
                         Common Questions
                     </span>
-                    <h2 className="text-4xl md:text-6xl font-serif leading-tight">
+                    <h2 className="text-[clamp(2.25rem,5vw,4rem)] font-serif leading-tight">
                         Everything needed <br /> for your peace of mind.
                     </h2>
                 </div>
 
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-[1vw]">
                     {faqs.map((faq, index) => (
                         <FAQItem key={index} question={faq.question} answer={faq.answer} index={index} />
                     ))}
@@ -62,12 +62,12 @@ const FAQItem = ({ question, answer, index }: { question: string, answer: string
         >
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full flex items-center justify-between py-6 md:py-8 text-left group"
+                className="w-full flex items-center justify-between py-[3vh] text-left group"
             >
-                <span className="text-lg md:text-2xl font-serif text-[#F5F2EB] group-hover:text-[#D4AF37] transition-colors duration-300">
+                <span className="text-[clamp(1.125rem,1.5vw,1.5rem)] font-serif text-[#F5F2EB] group-hover:text-[#D4AF37] transition-colors duration-300">
                     {question}
                 </span>
-                <span className="relative flex items-center justify-center w-8 h-8">
+                <span className="relative flex items-center justify-center w-[clamp(1.5rem,2vw,2rem)] h-[clamp(1.5rem,2vw,2rem)]">
                     <motion.span
                         animate={{ rotate: isOpen ? 90 : 0 }}
                         className="absolute w-full h-[1px] bg-[#F5F2EB] group-hover:bg-[#D4AF37] transition-colors"
@@ -87,7 +87,7 @@ const FAQItem = ({ question, answer, index }: { question: string, answer: string
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                     >
-                        <p className="text-[#F5F2EB]/60 font-sans text-base md:text-lg leading-relaxed pb-8 max-w-2xl">
+                        <p className="text-[#F5F2EB]/60 font-sans text-[clamp(1rem,1.1vw,1.125rem)] leading-relaxed pb-8 max-w-2xl">
                             {answer}
                         </p>
                     </motion.div>

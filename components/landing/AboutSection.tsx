@@ -73,7 +73,7 @@ const AboutScroll = () => {
                                 borderRadius: shapeRadius,
                                 borderColor: textColor
                             }}
-                            className="w-48 h-48 md:w-96 md:h-96 border-[1px] opacity-20 absolute"
+                            className="w-[20vh] h-[20vh] md:w-[40vh] md:h-[40vh] border-[1px] opacity-20 absolute"
                         />
                         <motion.div
                             style={{
@@ -82,7 +82,7 @@ const AboutScroll = () => {
                                 borderRadius: shapeRadius,
                                 borderColor: textColor
                             }}
-                            className="w-32 h-32 md:w-72 md:h-72 border-[1px] opacity-40 absolute"
+                            className="w-[15vh] h-[15vh] md:w-[30vh] md:h-[30vh] border-[1px] opacity-40 absolute"
                         />
                         {/* Core Text changing based on stage */}
                         <div className="absolute z-10 text-center mix-blend-difference">
@@ -131,14 +131,14 @@ const AboutScroll = () => {
 
 const NarrativeBlock = ({ title, text, align, color }: { title: string, text: string, align: 'start' | 'center' | 'end', color: any }) => {
     return (
-        <div className={`h-[80vh] md:h-screen flex flex-col justify-center p-8 md:p-24 ${align === 'center' ? 'md:items-center md:text-center' : align === 'end' ? 'md:items-start' : 'md:items-start'}`}>
+        <div className={`h-[80vh] md:h-screen flex flex-col justify-center p-[4vw] md:p-[10vw] ${align === 'center' ? 'md:items-center md:text-center' : align === 'end' ? 'md:items-start' : 'md:items-start'}`}>
             <motion.h2
                 style={{ color }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ margin: "-200px" }}
-                className="text-5xl md:text-8xl font-serif mb-8 leading-tight"
+                className="text-[clamp(3rem,6vw,6rem)] font-serif mb-[3vh] leading-tight"
             >
                 {title}
             </motion.h2>
@@ -148,7 +148,7 @@ const NarrativeBlock = ({ title, text, align, color }: { title: string, text: st
                 whileInView={{ opacity: 0.8, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
                 viewport={{ margin: "-200px" }}
-                className="text-lg md:text-2xl font-sans max-w-md leading-relaxed"
+                className="text-[clamp(1.125rem,1.5vw,1.5rem)] font-sans max-w-md leading-relaxed"
             >
                 {text}
             </motion.p>
@@ -173,7 +173,7 @@ const StageLabel = ({ progress }: { progress: any }) => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-sm md:text-base tracking-[0.3em] uppercase font-bold text-white/80"
+            className="text-[clamp(0.875rem,1vw,1rem)] tracking-[0.3em] uppercase font-bold text-white/80"
         >
             {stage === 1 ? "DISCOMFORT" : stage === 2 ? "RELEASE" : "FLOW"}
         </motion.span>
