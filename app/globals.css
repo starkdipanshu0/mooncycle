@@ -30,6 +30,12 @@ body {
   /* Prevent horizontal scroll causing zoom issues */
 }
 
+::selection {
+  background: rgba(212, 175, 55, 0.99);
+  /* Rich Moon Gold */
+  color: #12161F;
+}
+
 .font-serif {
   font-family: var(--font-playfair), serif;
 }

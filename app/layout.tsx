@@ -31,6 +31,8 @@ export const viewport: Viewport = {
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/landing/Footer";
 
+import { CustomCursor } from "@/components/ui/CustomCursor";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -42,6 +44,7 @@ export default function RootLayout({
         className={`${inter.variable} ${playfair.variable} ${caveat.variable} antialiased font-sans bg-[#F5F2EB]`}
         suppressHydrationWarning
       >
+        <CustomCursor />
         <Navbar />
         {children}
         <Footer />
