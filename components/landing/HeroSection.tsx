@@ -52,11 +52,11 @@ export const HeroSection = () => {
     const scaleImage = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
 
     return (
-        <section ref={containerRef} className="relative w-full min-h-screen bg-[#12161F] overflow-hidden flex flex-col lg:flex-row text-[#F5F2EB] items-center">
+        <section ref={containerRef} className="relative w-full min-h-[100dvh] bg-[#12161F] overflow-hidden flex flex-col lg:flex-row text-[#F5F2EB] items-center">
 
             {/* --- 1. LEFT SIDE: THE NARRATIVE (50%) --- */}
             <motion.div
-                className="relative z-20 w-full lg:w-1/2 h-full flex flex-col justify-center px-6 lg:px-24 pt-32 lg:pt-32"
+                className="relative z-20 w-full lg:w-1/2 h-full flex flex-col justify-center px-[6vw] lg:px-[8vw] pt-[15vh]"
                 variants={staggerContainer}
                 initial="hidden"
                 animate="visible"
@@ -64,7 +64,7 @@ export const HeroSection = () => {
             >
 
                 {/* Eyebrow Tag */}
-                <motion.div variants={fadeInUp} className="flex items-center gap-4 mb-6">
+                <motion.div variants={fadeInUp} className="flex items-center gap-4 mb-[2vh]">
                     <span className="h-[1px] w-12 bg-[#D4AF37]"></span>
                     <span className="text-[#D4AF37] tracking-[0.3em] text-xs font-semibold uppercase font-sans">
                         Est. 2025 | Handcrafted in India
@@ -72,23 +72,23 @@ export const HeroSection = () => {
                 </motion.div>
 
                 {/* Headline */}
-                <motion.h1 variants={fadeInUp} className="font-serif text-5xl lg:text-7xl leading-[1.1] mb-6">
+                <motion.h1 variants={fadeInUp} className="font-serif text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.1] mb-[3vh]">
                     <span className="block text-white">VELVET</span>
                     <span className="block text-[#D4AF37] italic">ARMOUR</span>
-                    <span className="block text-3xl lg:text-4xl mt-2 font-light tracking-wide text-white/90">
+                    <span className="block text-[clamp(1.5rem,2.5vw,2.5rem)] mt-2 font-light tracking-wide text-white/90">
                         FOR THE MODERN CYCLE.
                     </span>
                 </motion.h1>
 
                 {/* Sub-Headline */}
-                <motion.p variants={fadeInUp} className="font-sans text-white/70 text-lg lg:text-xl leading-relaxed max-w-md mb-10">
+                <motion.p variants={fadeInUp} className="font-sans text-white/70 text-[clamp(1rem,1.1vw,1.25rem)] leading-relaxed max-w-md mb-[5vh]">
                     Stop pausing your life for pain. Wrapped in brushed cotton and anchored by
                     <span className="text-white font-medium"> 750g of Himalayan Salt</span>
                     —this is the warmth that moves with you.
                 </motion.p>
 
                 {/* Buttons */}
-                <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-6 items-start sm:items-center mb-16">
+                <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-[1.5vw] items-start sm:items-center mb-[8vh]">
                     {/* Primary Button */}
                     <button className="group relative px-8 py-4 bg-[#D4AF37] text-[#12161F] font-serif font-bold tracking-wider hover:bg-white transition-colors duration-500">
                         BEGIN THE RITUAL
@@ -104,7 +104,7 @@ export const HeroSection = () => {
                 </motion.div>
 
                 {/* Trust Badges (Footer of Hero) */}
-                <motion.div variants={fadeInUp} className="flex gap-8 lg:gap-12 border-t border-white/10 pt-8">
+                <motion.div variants={fadeInUp} className="flex gap-8 lg:gap-12 border-t border-white/10 pt-[4vh]">
                     <TrustItem icon={<Droplets size={18} />} text="Moist Heat Therapy" />
                     <TrustItem icon={<Leaf size={18} />} text="100% Organic Cotton" />
                     <TrustItem icon={<Hexagon size={18} />} text="Pure Himalayan Salt" />
@@ -113,7 +113,7 @@ export const HeroSection = () => {
 
             {/* --- 2. RIGHT SIDE: THE VISUAL (50%) --- */}
             <motion.div
-                className="absolute top-0 right-0 w-full lg:w-[55%] h-full z-10"
+                className="absolute top-0 right-0 w-full lg:w-[50vw] h-full z-10"
                 variants={imageReveal}
                 initial="hidden"
                 animate="visible"
