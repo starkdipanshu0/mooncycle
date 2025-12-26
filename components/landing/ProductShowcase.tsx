@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const ProductShowcase = () => {
     return (
-        <section className="w-full min-h-screen bg-[#F5F2EB] flex items-center justify-center p-[4vw] md:p-[6vw] relative overflow-hidden">
+        <section className="w-full min-h-screen bg-[#F5F2EB] flex items-center justify-center px-[5vw] pt-[15vh] pb-[5vh] relative overflow-hidden">
 
             {/* Background Texture */}
             <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-multiply" />
@@ -15,7 +15,7 @@ export const ProductShowcase = () => {
 
                 {/* Visual / Product Image */}
                 <motion.div
-                    className="w-full md:w-[45%] relative aspect-[3/4]"
+                    className="w-full md:w-[40%] relative aspect-[4/5]"
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
