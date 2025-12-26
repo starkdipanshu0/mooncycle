@@ -56,7 +56,7 @@ export const HeroSection = () => {
 
             {/* --- 1. LEFT SIDE: THE NARRATIVE (50%) --- */}
             <motion.div
-                className="relative z-20 w-full lg:w-1/2 h-full flex flex-col justify-center px-6 lg:px-24 pt-20 lg:pt-0"
+                className="relative z-20 w-full lg:w-1/2 h-full flex flex-col justify-center px-6 lg:px-24 pt-32 lg:pt-32"
                 variants={staggerContainer}
                 initial="hidden"
                 animate="visible"
