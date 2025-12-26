@@ -81,14 +81,14 @@ export const HeroSection = () => {
                 </motion.h1>
 
                 {/* Sub-Headline */}
-                <motion.p variants={fadeInUp} className="font-sans text-white/70 text-[clamp(1rem,1.1vw,1.25rem)] leading-relaxed max-w-md mb-[5vh]">
+                <motion.p variants={fadeInUp} className="font-sans text-white/70 text-[clamp(1rem,1.1vw,1.25rem)] leading-relaxed max-w-md mb-[4vh]">
                     Stop pausing your life for pain. Wrapped in brushed cotton and anchored by
                     <span className="text-white font-medium"> 750g of Himalayan Salt</span>
                     —this is the warmth that moves with you.
                 </motion.p>
 
                 {/* Buttons */}
-                <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-[1.5vw] items-start sm:items-center mb-[8vh]">
+                <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-[1.5vw] items-start sm:items-center mb-[6vh]">
                     {/* Primary Button */}
                     <button className="group relative px-8 py-4 bg-[#D4AF37] text-[#12161F] font-serif font-bold tracking-wider hover:bg-white transition-colors duration-500">
                         BEGIN THE RITUAL

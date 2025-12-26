@@ -15,7 +15,7 @@ export const ProductShowcase = () => {
 
                 {/* Visual / Product Image */}
                 <motion.div
-                    className="w-full md:w-[40%] relative aspect-[4/5]"
+                    className="w-full md:w-[35%] relative aspect-[3/4]"
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
@@ -46,15 +46,15 @@ export const ProductShowcase = () => {
                 </motion.div>
 
                 {/* Product Details */}
-                <div className="w-full md:w-[45%] flex flex-col items-start gap-[2.5vh]">
+                <div className="w-full md:w-[40%] flex flex-col items-start gap-[1vh]">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ margin: "-100px" }}
                     >
-                        <h4 className="text-[#D4AF37] text-[clamp(0.65rem,0.7vw,0.75rem)] tracking-[0.3em] uppercase font-bold mb-[1vh]">The Collection</h4>
-                        <h2 className="text-[clamp(2.5rem,4vw,3.5rem)] font-serif text-[#12161F] leading-[0.9] mb-[1.5vh]">
+                        <h4 className="text-[#D4AF37] text-[clamp(0.65rem,0.7vw,0.75rem)] tracking-[0.3em] uppercase font-bold mb-[0.5vh]">The Collection</h4>
+                        <h2 className="text-[clamp(2.5rem,4vw,3.5rem)] font-serif text-[#12161F] leading-[0.9] mb-[1vh]">
                             MoonCycle <br /> Relief Pad
                         </h2>
                         <p className="text-[clamp(0.875rem,1vw,1.125rem)] text-[#12161F]/70 font-sans leading-relaxed max-w-md">
